@@ -1,0 +1,1376 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<!-- ICON -->
+	<script src="https://unpkg.com/phosphor-icons"></script>
+	<!-- MY CSS -->
+	<link rel="stylesheet" href="styles/dashboard.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+	<title>Teacher Dashboard</title>
+</head>
+<body>
+
+	<!-- start: SIDEBAR -->
+	<section id="sidebar">
+		<a href="#" class="brand">
+			<img src="images/Logo.png" alt="Logo" class="logo" />
+
+		</a>
+
+		<ul class="sidebar__menu">
+			<li>
+				<a href="#" class="active"><i class="ph-house-fill"></i></a>
+				<ul class="sidebar__submenu">
+					<li class="title">Dashboard</li>		
+				</ul>
+			</li>
+			<li>
+				<a href="#"><i class="ph-airplay-fill"></i></a>
+				<ul class="sidebar__submenu">
+					<li class="title">Lessons</li>
+					<a href="#">Levels <i class="ph-caret-right-fill"></i></a>
+						<ul class="sidebar__dropdown-menu">
+                            <li><a href="#">Level 1</a></li>
+							<li><a href="#">Level 2</a></li>
+							<li><a href="#">Level 3</a></li>
+						</ul>
+					<li><a href="#">Books</a></li>
+					<li><a href="#">Lessons</a></li>
+					<li><a href="#">Games</a></li>			
+				</ul>
+			</li>
+			<li>
+				<a href="#"><i class="ph-clipboard-fill"></i></a>
+				<ul class="sidebar__submenu">
+					<li class="title">Progress</li>
+				</ul>
+			</li>
+			
+			<li>
+				<a href="#"><i class="ph-user-circle-fill"></i></a>
+				<ul class="sidebar__submenu">
+					<li class="title">Accounts</li>
+					<li><a href="#">User settings</a></li>
+					<li><a href="#">Change password</a></li>
+				</ul>
+			</li>
+			<li class="divider"></li>
+			<li>
+				<a href="#"><i class="ph-gear-fill"></i></a>
+			</li>
+			<li>
+				<a href="#" class="logout"><i class="ph-sign-out-fill"></i></a>
+			</li>
+		</ul>
+	</section>
+
+	<!-- start: SIDEBAR OVERLAY -->
+	<div class="sidebar-overlay"></div>
+	<!-- end: SIDEBAR OVERLAY -->
+	<!-- end: SIDEBAR -->
+
+	<!-- start: SIDEBAR MOBILE -->
+	<section id="sidebar-mobile">
+		<i class="ph-squares-four-fill toggle-sidebar"></i>
+		<a href="#" class="brand">
+			<i class="ph-flame-fill"></i>
+			dashboard
+		</a>
+	</section>
+	<!-- end: SIDEBAR MOBILE -->
+
+	<!-- start: MAIN -->
+	<section id="main">
+		
+		<!-- start: MAIN TOP -->
+		<div class="main__top">
+			<div class="main__top__title">
+				<h3>Dashboard</h3>
+                <h3>Welcome, Bigbear-books </h3>
+				
+			</div>
+			<ul class="main__top__menu">
+				<li class="search">
+					<a href="#">
+						<i class="ph-magnifying-glass"></i>
+					</a>
+					<div class="main__dropdown">
+						<form action="#">
+							<input type="text" name="" placeholder="Search">
+						</form>
+						<span>Recent Search</span>
+						<ul class="recent-search">
+							<li>
+								<a href="#">
+									<h5>Book 1</h5>
+									<p>Lesson 4</p>
+								</a>
+							</li>
+							<li>
+								<a href="#">
+									<h5>Level 2</h5>
+									<p>Book 10</p>
+								</a>
+							</li>
+							<li>
+								<a href="#">
+									<h5>Lesson 4</h5>
+									<p>Games.</p>
+								</a>
+							</li>
+							
+						</ul>
+					</div>
+				</li>
+				<li class="notification">
+					<a href="#">
+						<i class="ph-bell"></i>
+					</a>
+					<div class="main__dropdown">
+						<div class="notification__top">
+							<h4>Notifications</h4>
+							<span>6</span>
+						</div>
+						<ul class="notification__item">
+							<li>
+								<a href="#">
+									<div class="left">
+										<h5>Notification title</h5>
+										<p>New lesson updated</p>
+									</div>
+									<span>3 hours</span>
+								</a>
+							</li>
+							<li>
+								<a href="#">
+									<div class="left">
+										<h5>Notification title</h5>
+										<p>New Book in level 1</p>
+									</div>
+									<span>3 hours</span>
+								</a>
+							</li>
+							<li>
+								<a href="#">
+									<div class="left">
+										<h5>Notification title</h5>
+										<p>New Games updated</p>
+									</div>
+									<span>3 hours</span>
+								</a>
+							</li>
+							
+						</ul>
+					</div>
+				</li>
+				<li class="inbox">
+					<a href="#">
+						<i class="ph-chat-circle-dots"></i>
+					</a>
+					<span></span>
+				</li>
+				<li class="profile">
+					<a href="#">
+						<img src= images/logo.png>
+					</a>
+					<div class="main__dropdown">
+						<div class="profile__top">
+							<img src= images/logo.png>
+							<div class="name">
+								<h5>Bigbear-books</h5>
+								<p>Class 2 Teacher</p>
+							</div>
+						</div>
+						<ul class="profile__menu">
+							<li><a href="#"><i class="ph-user-circle-fill"></i> Edit profile</a></li>
+							<li><a href="#"><i class="ph-gear-fill"></i> Settings</a></li>
+						</ul>
+					</div>
+				</li>
+			</ul>
+		</div>
+		<!-- end: MAIN TOP -->
+
+		<!-- start: MAIN BODY -->
+		<div class="main__body">
+			<ul class="main__body__box-info">
+				<li>
+					<i class="ph ph-book"></i>
+					<h5>200</h5>
+					<p>Total Lessons</p>
+				</li>
+				<li>
+					<i class="ph ph-notebook"></i>
+					<h5>0</h5>
+					<p>Completed Lessons</p>
+				</li>
+				<li>
+					<i class="ph ph-book-open"></i>
+					<h5>200</h5>
+					<p>Remaining Lessons</p>
+				</li>
+			</ul>
+			<div class="main__body__data">
+				<div class="Lessons Summary">
+					<div class="summary__top">
+						<h2>Summary</h2>
+						<div class="Lesson-summary__menu">
+							
+						</div>
+					</div>
+					<ul class="lesson-summary__info">
+						<li>
+							<p>.</p>
+							<p>.</p>
+						</li>
+						
+					
+					</ul>
+					<div id="chart"></div>
+				</div>
+				<div class="members">
+					<div class="members__top">
+						<h2>Level 1</h2>
+						<div class="members__menu">
+							<i class="ph-dots-three-outline-vertical-fill"></i>
+							<ul class="menu">
+								<li>
+									<a href="#">Edit</a>
+								</li>
+								<li>
+									<a href="#">Remove</a>
+								</li>
+							</ul>
+						</div>
+					</div>
+					<ul class="members__user">
+						<ul class="book-list">
+                             <li>
+            <div class="book-container">
+                <div class="book-wrapper">
+                    <div class="book" onclick="toggleLessons(1)">
+                        <img src="images/Book1.png" alt="Book 1">
+                    </div>
+                    <div class="book-text">
+                        <span>Book 1</span>
+                        <div class="star" onclick="toggleBookCompletion(event, this)"></div>
+                    </div>
+                    <div id="lessons1" class="lesson-container">
+                        <div class="lesson-column">
+                            <div class="lesson">
+                                Lesson 1
+                                <div class="star" onclick="toggleCompletion(this)"></div>
+                            </div>
+                            <div class="lesson">
+                                Lesson 2
+                                <div class="star" onclick="toggleCompletion(this)"></div>
+                            </div>
+                            <div class="lesson">
+                                Lesson 3
+                                <div class="star" onclick="toggleCompletion(this)"></div>
+                            </div>
+                    
+                            <div class="lesson">
+                                Lesson 4
+                                <div class="star" onclick="toggleCompletion(this)"></div>
+                            </div>
+                        </div>
+                        <div class="lesson-column">
+                            <div class="lesson">
+                                Lesson 5
+                                <div class="star" onclick="toggleCompletion(this)"></div>
+                            </div>
+                            <div class="lesson">
+                                Lesson 6
+                                <div class="star" onclick="toggleCompletion(this)"></div>
+                            </div>
+                            <div class="lesson">
+                                Lesson 7
+                                <div class="star" onclick="toggleCompletion(this)"></div>
+                            </div>
+                    
+                            <div class="lesson">
+                                Lesson 8
+                                <div class="star" onclick="toggleCompletion(this)"></div>
+                            </div>
+                        </div>
+                        <div class="lesson-column">
+                            <div class="lesson">
+                                Lesson 9
+                                <div class="star" onclick="toggleCompletion(this)"></div>
+                            </div>
+                            <div class="lesson">
+                                Lesson 10
+                                <div class="star" onclick="toggleCompletion(this)"></div>
+                            </div>
+                            <div class="lesson">
+                                Lesson 11
+                                <div class="star" onclick="toggleCompletion(this)"></div>
+                            </div>
+                    
+                            <div class="lesson">
+                                Lesson 12
+                                <div class="star" onclick="toggleCompletion(this)"></div>
+                            </div>
+                        </div>
+                        <div class="lesson-column">
+                            <div class="lesson">
+                                Lesson 13
+                                <div class="star" onclick="toggleCompletion(this)"></div>
+                            </div>
+                            <div class="lesson">
+                                Lesson 14
+                                <div class="star" onclick="toggleCompletion(this)"></div>
+                            </div>
+                            <div class="lesson">
+                                Lesson 15
+                                <div class="star" onclick="toggleCompletion(this)"></div>
+                            </div>
+                    
+                            <div class="lesson">
+                                Lesson 16
+                                <div class="star" onclick="toggleCompletion(this)"></div>
+                            </div>
+                        </div>
+                        <div class="lesson-column">
+                            <div class="lesson">
+                                Lesson 17
+                                <div class="star" onclick="toggleCompletion(this)"></div>
+                            </div>
+                            <div class="lesson">
+                                Lesson 18
+                                <div class="star" onclick="toggleCompletion(this)"></div>
+                            </div>
+                            <div class="lesson">
+                                Lesson 19
+                                <div class="star" onclick="toggleCompletion(this)"></div>
+                            </div>
+                    
+                            <div class="lesson">
+                                Lesson 20
+                                <div class="star" onclick="toggleCompletion(this)"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </li>
+                            <li>
+                                <div class="book-container">
+                                    <div class="book-wrapper">
+                                        <div class="book" onclick="toggleLessons(2)">
+                                            <img src="images/book2.png" alt="Book 2">
+                                        </div>
+                                        <div class="book-text">
+                                            <span>Book 2</span>
+                                            <div class="star" onclick="toggleBookCompletion(event, this)"></div>
+                                        </div>
+                                        <div id="lessons2" class="lesson-container">
+                                            <div class="lesson-column">
+                                                <div class="lesson">
+                                                    Lesson 1
+                                                    <div class="star" onclick="toggleCompletion(this)"></div>
+                                                </div>
+                                                <div class="lesson">
+                                                    Lesson 2
+                                                    <div class="star" onclick="toggleCompletion(this)"></div>
+                                                </div>
+                                                <div class="lesson">
+                                                    Lesson 3
+                                                    <div class="star" onclick="toggleCompletion(this)"></div>
+                                                </div>
+                                        
+                                                <div class="lesson">
+                                                    Lesson 4
+                                                    <div class="star" onclick="toggleCompletion(this)"></div>
+                                                </div>
+                                            </div>
+                                            <div class="lesson-column">
+                                                <div class="lesson">
+                                                    Lesson 5
+                                                    <div class="star" onclick="toggleCompletion(this)"></div>
+                                                </div>
+                                                <div class="lesson">
+                                                    Lesson 6
+                                                    <div class="star" onclick="toggleCompletion(this)"></div>
+                                                </div>
+                                                <div class="lesson">
+                                                    Lesson 7
+                                                    <div class="star" onclick="toggleCompletion(this)"></div>
+                                                </div>
+                                        
+                                                <div class="lesson">
+                                                    Lesson 8
+                                                    <div class="star" onclick="toggleCompletion(this)"></div>
+                                                </div>
+                                            </div>
+                                            <div class="lesson-column">
+                                                <div class="lesson">
+                                                    Lesson 9
+                                                    <div class="star" onclick="toggleCompletion(this)"></div>
+                                                </div>
+                                                <div class="lesson">
+                                                    Lesson 10
+                                                    <div class="star" onclick="toggleCompletion(this)"></div>
+                                                </div>
+                                                <div class="lesson">
+                                                    Lesson 11
+                                                    <div class="star" onclick="toggleCompletion(this)"></div>
+                                                </div>
+                                        
+                                                <div class="lesson">
+                                                    Lesson 12
+                                                    <div class="star" onclick="toggleCompletion(this)"></div>
+                                                </div>
+                                            </div>
+                                            <div class="lesson-column">
+                                                <div class="lesson">
+                                                    Lesson 13
+                                                    <div class="star" onclick="toggleCompletion(this)"></div>
+                                                </div>
+                                                <div class="lesson">
+                                                    Lesson 14
+                                                    <div class="star" onclick="toggleCompletion(this)"></div>
+                                                </div>
+                                                <div class="lesson">
+                                                    Lesson 15
+                                                    <div class="star" onclick="toggleCompletion(this)"></div>
+                                                </div>
+                                        
+                                                <div class="lesson">
+                                                    Lesson 16
+                                                    <div class="star" onclick="toggleCompletion(this)"></div>
+                                                </div>
+                                            </div>
+                                            <div class="lesson-column">
+                                                <div class="lesson">
+                                                    Lesson 17
+                                                    <div class="star" onclick="toggleCompletion(this)"></div>
+                                                </div>
+                                                <div class="lesson">
+                                                    Lesson 18
+                                                    <div class="star" onclick="toggleCompletion(this)"></div>
+                                                </div>
+                                                <div class="lesson">
+                                                    Lesson 19
+                                                    <div class="star" onclick="toggleCompletion(this)"></div>
+                                                </div>
+                                        
+                                                <div class="lesson">
+                                                    Lesson 20
+                                                    <div class="star" onclick="toggleCompletion(this)"></div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="book-container">
+                                    <div class="book-wrapper">
+                                        <div class="book" onclick="toggleLessons(3)">
+                                            <img src="images/book3.png" alt="Book 3">
+                                        </div>
+                                        <div class="book-text">
+                                            <span>Book 3</span>
+                                            <div class="star" onclick="toggleBookCompletion(event, this)"></div>
+                                        </div>
+                                        <div id="lessons3" class="lesson-container">
+                                            <div class="lesson-column">
+                                                <div class="lesson">
+                                                    Lesson 1
+                                                    <div class="star" onclick="toggleCompletion(this)"></div>
+                                                </div>
+                                                <div class="lesson">
+                                                    Lesson 2
+                                                    <div class="star" onclick="toggleCompletion(this)"></div>
+                                                </div>
+                                                <div class="lesson">
+                                                    Lesson 3
+                                                    <div class="star" onclick="toggleCompletion(this)"></div>
+                                                </div>
+                                        
+                                                <div class="lesson">
+                                                    Lesson 4
+                                                    <div class="star" onclick="toggleCompletion(this)"></div>
+                                                </div>
+                                            </div>
+                                            <div class="lesson-column">
+                                                <div class="lesson">
+                                                    Lesson 5
+                                                    <div class="star" onclick="toggleCompletion(this)"></div>
+                                                </div>
+                                                <div class="lesson">
+                                                    Lesson 6
+                                                    <div class="star" onclick="toggleCompletion(this)"></div>
+                                                </div>
+                                                <div class="lesson">
+                                                    Lesson 7
+                                                    <div class="star" onclick="toggleCompletion(this)"></div>
+                                                </div>
+                                        
+                                                <div class="lesson">
+                                                    Lesson 8
+                                                    <div class="star" onclick="toggleCompletion(this)"></div>
+                                                </div>
+                                            </div>
+                                            <div class="lesson-column">
+                                                <div class="lesson">
+                                                    Lesson 9
+                                                    <div class="star" onclick="toggleCompletion(this)"></div>
+                                                </div>
+                                                <div class="lesson">
+                                                    Lesson 10
+                                                    <div class="star" onclick="toggleCompletion(this)"></div>
+                                                </div>
+                                                <div class="lesson">
+                                                    Lesson 11
+                                                    <div class="star" onclick="toggleCompletion(this)"></div>
+                                                </div>
+                                        
+                                                <div class="lesson">
+                                                    Lesson 12
+                                                    <div class="star" onclick="toggleCompletion(this)"></div>
+                                                </div>
+                                            </div>
+                                            <div class="lesson-column">
+                                                <div class="lesson">
+                                                    Lesson 13
+                                                    <div class="star" onclick="toggleCompletion(this)"></div>
+                                                </div>
+                                                <div class="lesson">
+                                                    Lesson 14
+                                                    <div class="star" onclick="toggleCompletion(this)"></div>
+                                                </div>
+                                                <div class="lesson">
+                                                    Lesson 15
+                                                    <div class="star" onclick="toggleCompletion(this)"></div>
+                                                </div>
+                                        
+                                                <div class="lesson">
+                                                    Lesson 16
+                                                    <div class="star" onclick="toggleCompletion(this)"></div>
+                                                </div>
+                                            </div>
+                                            <div class="lesson-column">
+                                                <div class="lesson">
+                                                    Lesson 17
+                                                    <div class="star" onclick="toggleCompletion(this)"></div>
+                                                </div>
+                                                <div class="lesson">
+                                                    Lesson 18
+                                                    <div class="star" onclick="toggleCompletion(this)"></div>
+                                                </div>
+                                                <div class="lesson">
+                                                    Lesson 19
+                                                    <div class="star" onclick="toggleCompletion(this)"></div>
+                                                </div>
+                                        
+                                                <div class="lesson">
+                                                    Lesson 20
+                                                    <div class="star" onclick="toggleCompletion(this)"></div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="book-container">
+                                    <div class="book-wrapper">
+                                        <div class="book" onclick="toggleLessons(4)">
+                                            <img src="images/book4.png" alt="Book 4">
+                                        </div>
+                                        <div class="book-text">
+                                            <span>Book 4</span>
+                                            <div class="star" onclick="toggleBookCompletion(event, this)"></div>
+                                        </div>
+                                        <div id="lessons4" class="lesson-container">
+                                            <div class="lesson-column">
+                                                <div class="lesson">
+                                                    Lesson 1
+                                                    <div class="star" onclick="toggleCompletion(this)"></div>
+                                                </div>
+                                                <div class="lesson">
+                                                    Lesson 2
+                                                    <div class="star" onclick="toggleCompletion(this)"></div>
+                                                </div>
+                                                <div class="lesson">
+                                                    Lesson 3
+                                                    <div class="star" onclick="toggleCompletion(this)"></div>
+                                                </div>
+                                        
+                                                <div class="lesson">
+                                                    Lesson 4
+                                                    <div class="star" onclick="toggleCompletion(this)"></div>
+                                                </div>
+                                            </div>
+                                            <div class="lesson-column">
+                                                <div class="lesson">
+                                                    Lesson 5
+                                                    <div class="star" onclick="toggleCompletion(this)"></div>
+                                                </div>
+                                                <div class="lesson">
+                                                    Lesson 6
+                                                    <div class="star" onclick="toggleCompletion(this)"></div>
+                                                </div>
+                                                <div class="lesson">
+                                                    Lesson 7
+                                                    <div class="star" onclick="toggleCompletion(this)"></div>
+                                                </div>
+                                        
+                                                <div class="lesson">
+                                                    Lesson 8
+                                                    <div class="star" onclick="toggleCompletion(this)"></div>
+                                                </div>
+                                            </div>
+                                            <div class="lesson-column">
+                                                <div class="lesson">
+                                                    Lesson 9
+                                                    <div class="star" onclick="toggleCompletion(this)"></div>
+                                                </div>
+                                                <div class="lesson">
+                                                    Lesson 10
+                                                    <div class="star" onclick="toggleCompletion(this)"></div>
+                                                </div>
+                                                <div class="lesson">
+                                                    Lesson 11
+                                                    <div class="star" onclick="toggleCompletion(this)"></div>
+                                                </div>
+                                        
+                                                <div class="lesson">
+                                                    Lesson 12
+                                                    <div class="star" onclick="toggleCompletion(this)"></div>
+                                                </div>
+                                            </div>
+                                            <div class="lesson-column">
+                                                <div class="lesson">
+                                                    Lesson 13
+                                                    <div class="star" onclick="toggleCompletion(this)"></div>
+                                                </div>
+                                                <div class="lesson">
+                                                    Lesson 14
+                                                    <div class="star" onclick="toggleCompletion(this)"></div>
+                                                </div>
+                                                <div class="lesson">
+                                                    Lesson 15
+                                                    <div class="star" onclick="toggleCompletion(this)"></div>
+                                                </div>
+                                        
+                                                <div class="lesson">
+                                                    Lesson 16
+                                                    <div class="star" onclick="toggleCompletion(this)"></div>
+                                                </div>
+                                            </div>
+                                            <div class="lesson-column">
+                                                <div class="lesson">
+                                                    Lesson 17
+                                                    <div class="star" onclick="toggleCompletion(this)"></div>
+                                                </div>
+                                                <div class="lesson">
+                                                    Lesson 18
+                                                    <div class="star" onclick="toggleCompletion(this)"></div>
+                                                </div>
+                                                <div class="lesson">
+                                                    Lesson 19
+                                                    <div class="star" onclick="toggleCompletion(this)"></div>
+                                                </div>
+                                        
+                                                <div class="lesson">
+                                                    Lesson 20
+                                                    <div class="star" onclick="toggleCompletion(this)"></div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="book-container">
+                                    <div class="book-wrapper">
+                                        <div class="book" onclick="toggleLessons(5)">
+                                            <img src="images/book5.png" alt="Book 5">
+                                        </div>
+                                        <div class="book-text">
+                                            <span>Book 5</span>
+                                            <div class="star" onclick="toggleBookCompletion(event, this)"></div>
+                                        </div>
+                                        <div id="lessons5" class="lesson-container">
+                                            <div class="lesson-column">
+                                                <div class="lesson">
+                                                    Lesson 1
+                                                    <div class="star" onclick="toggleCompletion(this)"></div>
+                                                </div>
+                                                <div class="lesson">
+                                                    Lesson 2
+                                                    <div class="star" onclick="toggleCompletion(this)"></div>
+                                                </div>
+                                                <div class="lesson">
+                                                    Lesson 3
+                                                    <div class="star" onclick="toggleCompletion(this)"></div>
+                                                </div>
+                                        
+                                                <div class="lesson">
+                                                    Lesson 4
+                                                    <div class="star" onclick="toggleCompletion(this)"></div>
+                                                </div>
+                                            </div>
+                                            <div class="lesson-column">
+                                                <div class="lesson">
+                                                    Lesson 5
+                                                    <div class="star" onclick="toggleCompletion(this)"></div>
+                                                </div>
+                                                <div class="lesson">
+                                                    Lesson 6
+                                                    <div class="star" onclick="toggleCompletion(this)"></div>
+                                                </div>
+                                                <div class="lesson">
+                                                    Lesson 7
+                                                    <div class="star" onclick="toggleCompletion(this)"></div>
+                                                </div>
+                                        
+                                                <div class="lesson">
+                                                    Lesson 8
+                                                    <div class="star" onclick="toggleCompletion(this)"></div>
+                                                </div>
+                                            </div>
+                                            <div class="lesson-column">
+                                                <div class="lesson">
+                                                    Lesson 9
+                                                    <div class="star" onclick="toggleCompletion(this)"></div>
+                                                </div>
+                                                <div class="lesson">
+                                                    Lesson 10
+                                                    <div class="star" onclick="toggleCompletion(this)"></div>
+                                                </div>
+                                                <div class="lesson">
+                                                    Lesson 11
+                                                    <div class="star" onclick="toggleCompletion(this)"></div>
+                                                </div>
+                                        
+                                                <div class="lesson">
+                                                    Lesson 12
+                                                    <div class="star" onclick="toggleCompletion(this)"></div>
+                                                </div>
+                                            </div>
+                                            <div class="lesson-column">
+                                                <div class="lesson">
+                                                    Lesson 13
+                                                    <div class="star" onclick="toggleCompletion(this)"></div>
+                                                </div>
+                                                <div class="lesson">
+                                                    Lesson 14
+                                                    <div class="star" onclick="toggleCompletion(this)"></div>
+                                                </div>
+                                                <div class="lesson">
+                                                    Lesson 15
+                                                    <div class="star" onclick="toggleCompletion(this)"></div>
+                                                </div>
+                                        
+                                                <div class="lesson">
+                                                    Lesson 16
+                                                    <div class="star" onclick="toggleCompletion(this)"></div>
+                                                </div>
+                                            </div>
+                                            <div class="lesson-column">
+                                                <div class="lesson">
+                                                    Lesson 17
+                                                    <div class="star" onclick="toggleCompletion(this)"></div>
+                                                </div>
+                                                <div class="lesson">
+                                                    Lesson 18
+                                                    <div class="star" onclick="toggleCompletion(this)"></div>
+                                                </div>
+                                                <div class="lesson">
+                                                    Lesson 19
+                                                    <div class="star" onclick="toggleCompletion(this)"></div>
+                                                </div>
+                                        
+                                                <div class="lesson">
+                                                    Lesson 20
+                                                    <div class="star" onclick="toggleCompletion(this)"></div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="book-container">
+                                    <div class="book-wrapper">
+                                        <div class="book" onclick="toggleLessons(6)">
+                                            <img src="images/book6.png" alt="Book 6">
+                                        </div>
+                                        <div class="book-text">
+                                            <span>Book 6</span>
+                                            <div class="star" onclick="toggleBookCompletion(event, this)"></div>
+                                        </div>
+                                        <div id="lessons6" class="lesson-container">
+                                            <div class="lesson-column">
+                                                <div class="lesson">
+                                                    Lesson 1
+                                                    <div class="star" onclick="toggleCompletion(this)"></div>
+                                                </div>
+                                                <div class="lesson">
+                                                    Lesson 2
+                                                    <div class="star" onclick="toggleCompletion(this)"></div>
+                                                </div>
+                                                <div class="lesson">
+                                                    Lesson 3
+                                                    <div class="star" onclick="toggleCompletion(this)"></div>
+                                                </div>
+                                        
+                                                <div class="lesson">
+                                                    Lesson 4
+                                                    <div class="star" onclick="toggleCompletion(this)"></div>
+                                                </div>
+                                            </div>
+                                            <div class="lesson-column">
+                                                <div class="lesson">
+                                                    Lesson 5
+                                                    <div class="star" onclick="toggleCompletion(this)"></div>
+                                                </div>
+                                                <div class="lesson">
+                                                    Lesson 6
+                                                    <div class="star" onclick="toggleCompletion(this)"></div>
+                                                </div>
+                                                <div class="lesson">
+                                                    Lesson 7
+                                                    <div class="star" onclick="toggleCompletion(this)"></div>
+                                                </div>
+                                        
+                                                <div class="lesson">
+                                                    Lesson 8
+                                                    <div class="star" onclick="toggleCompletion(this)"></div>
+                                                </div>
+                                            </div>
+                                            <div class="lesson-column">
+                                                <div class="lesson">
+                                                    Lesson 9
+                                                    <div class="star" onclick="toggleCompletion(this)"></div>
+                                                </div>
+                                                <div class="lesson">
+                                                    Lesson 10
+                                                    <div class="star" onclick="toggleCompletion(this)"></div>
+                                                </div>
+                                                <div class="lesson">
+                                                    Lesson 11
+                                                    <div class="star" onclick="toggleCompletion(this)"></div>
+                                                </div>
+                                        
+                                                <div class="lesson">
+                                                    Lesson 12
+                                                    <div class="star" onclick="toggleCompletion(this)"></div>
+                                                </div>
+                                            </div>
+                                            <div class="lesson-column">
+                                                <div class="lesson">
+                                                    Lesson 13
+                                                    <div class="star" onclick="toggleCompletion(this)"></div>
+                                                </div>
+                                                <div class="lesson">
+                                                    Lesson 14
+                                                    <div class="star" onclick="toggleCompletion(this)"></div>
+                                                </div>
+                                                <div class="lesson">
+                                                    Lesson 15
+                                                    <div class="star" onclick="toggleCompletion(this)"></div>
+                                                </div>
+                                        
+                                                <div class="lesson">
+                                                    Lesson 16
+                                                    <div class="star" onclick="toggleCompletion(this)"></div>
+                                                </div>
+                                            </div>
+                                            <div class="lesson-column">
+                                                <div class="lesson">
+                                                    Lesson 17
+                                                    <div class="star" onclick="toggleCompletion(this)"></div>
+                                                </div>
+                                                <div class="lesson">
+                                                    Lesson 18
+                                                    <div class="star" onclick="toggleCompletion(this)"></div>
+                                                </div>
+                                                <div class="lesson">
+                                                    Lesson 19
+                                                    <div class="star" onclick="toggleCompletion(this)"></div>
+                                                </div>
+                                        
+                                                <div class="lesson">
+                                                    Lesson 20
+                                                    <div class="star" onclick="toggleCompletion(this)"></div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="book-container">
+                                    <div class="book-wrapper">
+                                        <div class="book" onclick="toggleLessons(7)">
+                                            <img src="images/book7.png" alt="Book 7">
+                                        </div>
+                                        <div class="book-text">
+                                            <span>Book 7</span>
+                                            <div class="star" onclick="toggleBookCompletion(event, this)"></div>
+                                        </div>
+                                        <div id="lessons7" class="lesson-container">
+                                            <div class="lesson-column">
+                                                <div class="lesson-column">
+                                                    <div class="lesson">
+                                                        Lesson 1
+                                                        <div class="star" onclick="toggleCompletion(this)"></div>
+                                                    </div>
+                                                    <div class="lesson">
+                                                        Lesson 2
+                                                        <div class="star" onclick="toggleCompletion(this)"></div>
+                                                    </div>
+                                                    <div class="lesson">
+                                                        Lesson 3
+                                                        <div class="star" onclick="toggleCompletion(this)"></div>
+                                                    </div>
+                                            
+                                                    <div class="lesson">
+                                                        Lesson 4
+                                                        <div class="star" onclick="toggleCompletion(this)"></div>
+                                                    </div>
+                                                </div>
+                                                <div class="lesson-column">
+                                                    <div class="lesson">
+                                                        Lesson 5
+                                                        <div class="star" onclick="toggleCompletion(this)"></div>
+                                                    </div>
+                                                    <div class="lesson">
+                                                        Lesson 6
+                                                        <div class="star" onclick="toggleCompletion(this)"></div>
+                                                    </div>
+                                                    <div class="lesson">
+                                                        Lesson 7
+                                                        <div class="star" onclick="toggleCompletion(this)"></div>
+                                                    </div>
+                                            
+                                                    <div class="lesson">
+                                                        Lesson 8
+                                                        <div class="star" onclick="toggleCompletion(this)"></div>
+                                                    </div>
+                                                </div>
+                                                <div class="lesson-column">
+                                                    <div class="lesson">
+                                                        Lesson 9
+                                                        <div class="star" onclick="toggleCompletion(this)"></div>
+                                                    </div>
+                                                    <div class="lesson">
+                                                        Lesson 10
+                                                        <div class="star" onclick="toggleCompletion(this)"></div>
+                                                    </div>
+                                                    <div class="lesson">
+                                                        Lesson 11
+                                                        <div class="star" onclick="toggleCompletion(this)"></div>
+                                                    </div>
+                                            
+                                                    <div class="lesson">
+                                                        Lesson 12
+                                                        <div class="star" onclick="toggleCompletion(this)"></div>
+                                                    </div>
+                                                </div>
+                                                <div class="lesson-column">
+                                                    <div class="lesson">
+                                                        Lesson 13
+                                                        <div class="star" onclick="toggleCompletion(this)"></div>
+                                                    </div>
+                                                    <div class="lesson">
+                                                        Lesson 14
+                                                        <div class="star" onclick="toggleCompletion(this)"></div>
+                                                    </div>
+                                                    <div class="lesson">
+                                                        Lesson 15
+                                                        <div class="star" onclick="toggleCompletion(this)"></div>
+                                                    </div>
+                                            
+                                                    <div class="lesson">
+                                                        Lesson 16
+                                                        <div class="star" onclick="toggleCompletion(this)"></div>
+                                                    </div>
+                                                </div>
+                                                <div class="lesson-column">
+                                                    <div class="lesson">
+                                                        Lesson 17
+                                                        <div class="star" onclick="toggleCompletion(this)"></div>
+                                                    </div>
+                                                    <div class="lesson">
+                                                        Lesson 18
+                                                        <div class="star" onclick="toggleCompletion(this)"></div>
+                                                    </div>
+                                                    <div class="lesson">
+                                                        Lesson 19
+                                                        <div class="star" onclick="toggleCompletion(this)"></div>
+                                                    </div>
+                                            
+                                                    <div class="lesson">
+                                                        Lesson 20
+                                                        <div class="star" onclick="toggleCompletion(this)"></div>
+                                                    </div>
+                                                </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="book-container">
+                                    <div class="book-wrapper">
+                                        <div class="book" onclick="toggleLessons(8)">
+                                            <img src="images/book8.png" alt="Book 8">
+                                        </div>
+                                        <div class="book-text">
+                                            <span>Book 8</span>
+                                            <div class="star" onclick="toggleBookCompletion(event, this)"></div>
+                                        </div>
+                                        <div id="lessons8" class="lesson-container">
+                                            <div class="lesson-column">
+                                                <div class="lesson-column">
+                                                    <div class="lesson">
+                                                        Lesson 1
+                                                        <div class="star" onclick="toggleCompletion(this)"></div>
+                                                    </div>
+                                                    <div class="lesson">
+                                                        Lesson 2
+                                                        <div class="star" onclick="toggleCompletion(this)"></div>
+                                                    </div>
+                                                    <div class="lesson">
+                                                        Lesson 3
+                                                        <div class="star" onclick="toggleCompletion(this)"></div>
+                                                    </div>
+                                            
+                                                    <div class="lesson">
+                                                        Lesson 4
+                                                        <div class="star" onclick="toggleCompletion(this)"></div>
+                                                    </div>
+                                                </div>
+                                                <div class="lesson-column">
+                                                    <div class="lesson">
+                                                        Lesson 5
+                                                        <div class="star" onclick="toggleCompletion(this)"></div>
+                                                    </div>
+                                                    <div class="lesson">
+                                                        Lesson 6
+                                                        <div class="star" onclick="toggleCompletion(this)"></div>
+                                                    </div>
+                                                    <div class="lesson">
+                                                        Lesson 7
+                                                        <div class="star" onclick="toggleCompletion(this)"></div>
+                                                    </div>
+                                            
+                                                    <div class="lesson">
+                                                        Lesson 8
+                                                        <div class="star" onclick="toggleCompletion(this)"></div>
+                                                    </div>
+                                                </div>
+                                                <div class="lesson-column">
+                                                    <div class="lesson">
+                                                        Lesson 9
+                                                        <div class="star" onclick="toggleCompletion(this)"></div>
+                                                    </div>
+                                                    <div class="lesson">
+                                                        Lesson 10
+                                                        <div class="star" onclick="toggleCompletion(this)"></div>
+                                                    </div>
+                                                    <div class="lesson">
+                                                        Lesson 11
+                                                        <div class="star" onclick="toggleCompletion(this)"></div>
+                                                    </div>
+                                            
+                                                    <div class="lesson">
+                                                        Lesson 12
+                                                        <div class="star" onclick="toggleCompletion(this)"></div>
+                                                    </div>
+                                                </div>
+                                                <div class="lesson-column">
+                                                    <div class="lesson">
+                                                        Lesson 13
+                                                        <div class="star" onclick="toggleCompletion(this)"></div>
+                                                    </div>
+                                                    <div class="lesson">
+                                                        Lesson 14
+                                                        <div class="star" onclick="toggleCompletion(this)"></div>
+                                                    </div>
+                                                    <div class="lesson">
+                                                        Lesson 15
+                                                        <div class="star" onclick="toggleCompletion(this)"></div>
+                                                    </div>
+                                            
+                                                    <div class="lesson">
+                                                        Lesson 16
+                                                        <div class="star" onclick="toggleCompletion(this)"></div>
+                                                    </div>
+                                                </div>
+                                                <div class="lesson-column">
+                                                    <div class="lesson">
+                                                        Lesson 17
+                                                        <div class="star" onclick="toggleCompletion(this)"></div>
+                                                    </div>
+                                                    <div class="lesson">
+                                                        Lesson 18
+                                                        <div class="star" onclick="toggleCompletion(this)"></div>
+                                                    </div>
+                                                    <div class="lesson">
+                                                        Lesson 19
+                                                        <div class="star" onclick="toggleCompletion(this)"></div>
+                                                    </div>
+                                            
+                                                    <div class="lesson">
+                                                        Lesson 20
+                                                        <div class="star" onclick="toggleCompletion(this)"></div>
+                                                    </div>
+                                                </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="book-container">
+                                    <div class="book-wrapper">
+                                        <div class="book" onclick="toggleLessons(9)">
+                                            <img src="images/book9.png" alt="Book 9">
+                                        </div>
+                                        <div class="book-text">
+                                            <span>Book 9</span>
+                                            <div class="star" onclick="toggleBookCompletion(event, this)"></div>
+                                        </div>
+                                        <div id="lessons9" class="lesson-container">
+                                            <div class="lesson-column">
+                                                <div class="lesson-column">
+                                                    <div class="lesson">
+                                                        Lesson 1
+                                                        <div class="star" onclick="toggleCompletion(this)"></div>
+                                                    </div>
+                                                    <div class="lesson">
+                                                        Lesson 2
+                                                        <div class="star" onclick="toggleCompletion(this)"></div>
+                                                    </div>
+                                                    <div class="lesson">
+                                                        Lesson 3
+                                                        <div class="star" onclick="toggleCompletion(this)"></div>
+                                                    </div>
+                                            
+                                                    <div class="lesson">
+                                                        Lesson 4
+                                                        <div class="star" onclick="toggleCompletion(this)"></div>
+                                                    </div>
+                                                </div>
+                                                <div class="lesson-column">
+                                                    <div class="lesson">
+                                                        Lesson 5
+                                                        <div class="star" onclick="toggleCompletion(this)"></div>
+                                                    </div>
+                                                    <div class="lesson">
+                                                        Lesson 6
+                                                        <div class="star" onclick="toggleCompletion(this)"></div>
+                                                    </div>
+                                                    <div class="lesson">
+                                                        Lesson 7
+                                                        <div class="star" onclick="toggleCompletion(this)"></div>
+                                                    </div>
+                                            
+                                                    <div class="lesson">
+                                                        Lesson 8
+                                                        <div class="star" onclick="toggleCompletion(this)"></div>
+                                                    </div>
+                                                </div>
+                                                <div class="lesson-column">
+                                                    <div class="lesson">
+                                                        Lesson 9
+                                                        <div class="star" onclick="toggleCompletion(this)"></div>
+                                                    </div>
+                                                    <div class="lesson">
+                                                        Lesson 10
+                                                        <div class="star" onclick="toggleCompletion(this)"></div>
+                                                    </div>
+                                                    <div class="lesson">
+                                                        Lesson 11
+                                                        <div class="star" onclick="toggleCompletion(this)"></div>
+                                                    </div>
+                                            
+                                                    <div class="lesson">
+                                                        Lesson 12
+                                                        <div class="star" onclick="toggleCompletion(this)"></div>
+                                                    </div>
+                                                </div>
+                                                <div class="lesson-column">
+                                                    <div class="lesson">
+                                                        Lesson 13
+                                                        <div class="star" onclick="toggleCompletion(this)"></div>
+                                                    </div>
+                                                    <div class="lesson">
+                                                        Lesson 14
+                                                        <div class="star" onclick="toggleCompletion(this)"></div>
+                                                    </div>
+                                                    <div class="lesson">
+                                                        Lesson 15
+                                                        <div class="star" onclick="toggleCompletion(this)"></div>
+                                                    </div>
+                                            
+                                                    <div class="lesson">
+                                                        Lesson 16
+                                                        <div class="star" onclick="toggleCompletion(this)"></div>
+                                                    </div>
+                                                </div>
+                                                <div class="lesson-column">
+                                                    <div class="lesson">
+                                                        Lesson 17
+                                                        <div class="star" onclick="toggleCompletion(this)"></div>
+                                                    </div>
+                                                    <div class="lesson">
+                                                        Lesson 18
+                                                        <div class="star" onclick="toggleCompletion(this)"></div>
+                                                    </div>
+                                                    <div class="lesson">
+                                                        Lesson 19
+                                                        <div class="star" onclick="toggleCompletion(this)"></div>
+                                                    </div>
+                                            
+                                                    <div class="lesson">
+                                                        Lesson 20
+                                                        <div class="star" onclick="toggleCompletion(this)"></div>
+                                                    </div>
+                                                </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="book-container">
+                                    <div class="book-wrapper">
+                                        <div class="book" onclick="toggleLessons(10)">
+                                            <img src="images/book10.png" alt="Book 10">
+                                        </div>
+                                        <div class="book-text">
+                                            <span>Book 10</span>
+                                            <div class="star" onclick="toggleBookCompletion(event, this)"></div>
+                                        </div>
+                                        <div id="lessons10" class="lesson-container">
+                                            <div class="lesson-column">
+                                                <div class="lesson">
+                                                    Lesson 1
+                                                    <div class="star" onclick="toggleCompletion(this)"></div>
+                                                </div>
+                                                <div class="lesson">
+                                                    Lesson 2
+                                                    <div class="star" onclick="toggleCompletion(this)"></div>
+                                                </div>
+                                                <div class="lesson">
+                                                    Lesson 3
+                                                    <div class="star" onclick="toggleCompletion(this)"></div>
+                                                </div>
+                                        
+                                                <div class="lesson">
+                                                    Lesson 4
+                                                    <div class="star" onclick="toggleCompletion(this)"></div>
+                                                </div>
+                                            </div>
+                                            <div class="lesson-column">
+                                                <div class="lesson">
+                                                    Lesson 5
+                                                    <div class="star" onclick="toggleCompletion(this)"></div>
+                                                </div>
+                                                <div class="lesson">
+                                                    Lesson 6
+                                                    <div class="star" onclick="toggleCompletion(this)"></div>
+                                                </div>
+                                                <div class="lesson">
+                                                    Lesson 7
+                                                    <div class="star" onclick="toggleCompletion(this)"></div>
+                                                </div>
+                                        
+                                                <div class="lesson">
+                                                    Lesson 8
+                                                    <div class="star" onclick="toggleCompletion(this)"></div>
+                                                </div>
+                                            </div>
+                                            <div class="lesson-column">
+                                                <div class="lesson">
+                                                    Lesson 9
+                                                    <div class="star" onclick="toggleCompletion(this)"></div>
+                                                </div>
+                                                <div class="lesson">
+                                                    Lesson 10
+                                                    <div class="star" onclick="toggleCompletion(this)"></div>
+                                                </div>
+                                                <div class="lesson">
+                                                    Lesson 11
+                                                    <div class="star" onclick="toggleCompletion(this)"></div>
+                                                </div>
+                                        
+                                                <div class="lesson">
+                                                    Lesson 12
+                                                    <div class="star" onclick="toggleCompletion(this)"></div>
+                                                </div>
+                                            </div>
+                                            <div class="lesson-column">
+                                                <div class="lesson">
+                                                    Lesson 13
+                                                    <div class="star" onclick="toggleCompletion(this)"></div>
+                                                </div>
+                                                <div class="lesson">
+                                                    Lesson 14
+                                                    <div class="star" onclick="toggleCompletion(this)"></div>
+                                                </div>
+                                                <div class="lesson">
+                                                    Lesson 15
+                                                    <div class="star" onclick="toggleCompletion(this)"></div>
+                                                </div>
+                                        
+                                                <div class="lesson">
+                                                    Lesson 16
+                                                    <div class="star" onclick="toggleCompletion(this)"></div>
+                                                </div>
+                                            </div>
+                                            <div class="lesson-column">
+                                                <div class="lesson">
+                                                    Lesson 17
+                                                    <div class="star" onclick="toggleCompletion(this)"></div>
+                                                </div>
+                                                <div class="lesson">
+                                                    Lesson 18
+                                                    <div class="star" onclick="toggleCompletion(this)"></div>
+                                                </div>
+                                                <div class="lesson">
+                                                    Lesson 19
+                                                    <div class="star" onclick="toggleCompletion(this)"></div>
+                                                </div>
+                                        
+                                                <div class="lesson">
+                                                    Lesson 20
+                                                    <div class="star" onclick="toggleCompletion(this)"></div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </li>
+                            </li>
+                            <!-- Add more book items here -->
+                        </ul>
+                        
+                        
+                        
+                            
+                            
+						</li>
+						
+					</ul>
+				</div>
+			</div>
+		</div>
+		<!-- end: MAIN BODY -->
+
+	</section>
+	<!-- end: MAIN -->
+	
+	<script src="https://cdn.jsdelivr.net/npm/apexcharts"></script>
+	<script src="script/dashboard.js"></script>
+</body>
+</html>
